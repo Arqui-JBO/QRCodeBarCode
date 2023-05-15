@@ -10,6 +10,7 @@ using Google.Android.Material.Snackbar;
 using static Android.Telephony.CarrierConfigManager;
 using _QRCodeBarCode.Infrastructure;
 using Xamarin.Forms;
+using Android.Webkit;
 
 namespace _QRCodeBarCode
 {
@@ -20,6 +21,8 @@ namespace _QRCodeBarCode
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
             SetContentView(Resource.Layout.activity_main);
 
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
